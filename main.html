@@ -4,9 +4,152 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .image-caption {
+            text-transform: capitalize;
+            font-weight: 600;
+            color: #4b5563;
+            margin-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .animal-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .broken-img {
+            background-color: #fca5a5;
+            color: #b91c1c;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+    </style>
 </head>
+<body class="p-4 sm:p-8">
 
-<body>
+    <div id="animal-photos" class="max-w-6xl mx-auto">
+        
+        <h1 id="photo-heading" class="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-8 text-center border-b-4 border-indigo-500 pb-3">
+            Animal Photos
+        </h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+            <div class="image-container rounded-lg shadow-md overflow-hidden">
+                <img 
+                    class="animal-img"
+                    src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/camel.jpg" 
+                    alt="A camel standing in a desert landscape."
+                    onerror="this.className='broken-img'; this.outerHTML='<div class=\'broken-img rounded-t-lg\'>Image failed to load: Camel</div>';"
+                />
+                <p class="image-caption">Camel</p>
+            </div>
+
+            <div class="image-container rounded-lg shadow-md overflow-hidden">
+                <img 
+                    class="animal-img"
+                    src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/cheetah.jpg" 
+                    alt="A cheetah resting on a grassy savanna."
+                    onerror="this.className='broken-img'; this.outerHTML='<div class=\'broken-img rounded-t-lg\'>Image failed to load: Cheetah</div>';"
+                />
+                <p class="image-caption">Cheetah</p>
+            </div>
+
+            <div class="image-container rounded-lg shadow-md overflow-hidden">
+                <img 
+                    class="animal-img"
+                    src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/elephant.jpg" 
+                    alt="An African elephant grazing."
+                    onerror="this.className='broken-img'; this.outerHTML='<div class=\'broken-img rounded-t-lg\'>Image failed to load: Elephant</div>';"
+                />
+                <p class="image-caption">Elephant</p>
+            </div>
+
+            <div class="image-container rounded-lg shadow-md overflow-hidden">
+                <img 
+                    class="animal-img"
+                    src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/gorilla.jpg" 
+                    alt="A western lowland gorilla looking at the camera."
+                    onerror="this.className='broken-img'; this.outerHTML='<div class=\'broken-img rounded-t-lg\'>Image failed to load: Gorilla</div>';"
+                />
+                <p class="image-caption">Gorilla</p>
+            </div>
+
+            <div class="image-container rounded-lg shadow-md overflow-hidden">
+                <img 
+                    class="animal-img"
+                    src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/koala.jpg" 
+                    alt="A fluffy koala bear sitting in a tree."
+                    onerror="this.className='broken-img'; this.outerHTML='<div class=\'broken-img rounded-t-lg\'>Image failed to load: Koala</div>';"
+                />
+                <p class="image-caption">Koala</p>
+            </div>
+
+            <div class="image-container rounded-lg shadow-md overflow-hidden">
+                <img 
+                    class="animal-img"
+                    src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/lion.jpg" 
+                    alt="A majestic male lion with a large mane."
+                    onerror="this.className='broken-img'; this.outerHTML='<div class=\'broken-img rounded-t-lg\'>Image failed to load: Lion</div>';"
+                />
+                <p class="image-caption">Lion</p>
+            </div>
+
+            <div class="image-container rounded-lg shadow-md overflow-hidden">
+                <img 
+                    class="animal-img"
+                    src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/polar_bear.jpg" 
+                    alt="A polar bear walking across the snow and ice."
+                    onerror="this.className='broken-img'; this.outerHTML='<div class=\'broken-img rounded-t-lg\'>Image failed to load: Polar Bear</div>';"
+                />
+                <p class="image-caption">Polar Bear</p>
+            </div>
+
+            <div class="image-container rounded-lg shadow-md overflow-hidden">
+                <img 
+                    class="animal-img"
+                    src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/tiger.jpg" 
+                    alt="A Bengal tiger with clear orange and black stripes."
+                    onerror="this.className='broken-img'; this.outerHTML='<div class=\'broken-img rounded-t-lg\'>Image failed to load: Tiger</div>';"
+                />
+                <p class="image-caption">Tiger</p>
+            </div>
+
+            <div class="image-container rounded-lg shadow-md overflow-hidden">
+                <img 
+                    class="animal-img"
+                    src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/wolf.jpg" 
+                    alt="A gray wolf howling or looking into the distance."
+                    onerror="this.className='broken-img'; this.outerHTML='<div class=\'broken-img rounded-t-lg\'>Image failed to load: Wolf</div>';"
+                />
+                <p class="image-caption">Wolf</p>
+            </div>
+
+        </div>
+    </div>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
